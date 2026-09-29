@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #ef4444; /* Rojo */
+  --color-brand-hover: #dc2626;
+  --color-brand-light: #fee2e2;
+  --color-bg-main: var(--bg-main);
+  --color-bg-panel: var(--bg-panel);
+  --color-border-color: var(--border-color);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-input-bg: var(--input-bg);
+}
+
+@layer base {
+  :root {
+    --bg-main: #f8fafc;
+    --bg-panel: #ffffff;
+    --border-color: #e2e8f0;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --input-bg: #f1f5f9;
+  }
+
+  .dark {
+    --bg-main: #000000;
+    --bg-panel: #0a0a0a;
+    --border-color: #262626;
+    --text-main: #ffffff;
+    --text-muted: #a3a3a3;
+    --input-bg: #171717;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    @apply font-sans antialiased select-none overflow-hidden transition-colors duration-300;
+  }
+}
+
+/* Custom Scrollbar for POS fast scrolling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #404040;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}

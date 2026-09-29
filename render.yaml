@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: synco-pos-backend
+    env: node
+    buildCommand: npm install -g pnpm@latest && pnpm install && pnpm run build
+    startCommand: pnpm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.x
+      - key: PORT
+        value: 3000
+      - key: DATABASE_URL
+        sync: false

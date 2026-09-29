@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.DS_Store
+*.log
+coverage/
+base_prueba/pos-test/node_modules/
+base_prueba/pos-test/dist/
+frontend/node_modules/
+frontend/dist/
